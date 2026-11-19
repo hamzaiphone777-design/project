@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101010;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #080808;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+}
+
+.logo span, h2 span {
+    color: #e63946;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    background:
+      linear-gradient(90deg, #000 5%, transparent),
+      url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1800")
+      center/cover;
+}
+
+.hero-content p {
+    color: #ccc;
+    margin: 20px 0;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #e63946;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+.cars {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.cars h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: #1c1c1c;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    margin: 20px 0 10px;
+}
+
+.car-card p {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.car-card a {
+    color: #e63946;
+    text-decoration: none;
+}
+
+.about, .contact {
+    padding: 80px 8%;
+    text-align: center;
+    background: #181818;
+}
+
+.about p, .contact p {
+    margin-top: 20px;
+    color: #aaa;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+    background: #080808;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .car-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+}
+@keyframes showCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
